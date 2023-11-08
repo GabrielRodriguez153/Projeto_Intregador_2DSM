@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Visualização;
+package Visualizacao;
 
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -68,7 +68,7 @@ public class Mapa extends javax.swing.JFrame {
         btn_perfil.setBackground(new java.awt.Color(250, 241, 228));
         btn_perfil.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_perfil.setForeground(new java.awt.Color(71, 83, 60));
-        btn_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/user2.png"))); // NOI18N
+        btn_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/user2.png"))); // NOI18N
         btn_perfil.setText("  PERFIL");
         btn_perfil.setContentAreaFilled(false);
         btn_perfil.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +80,7 @@ public class Mapa extends javax.swing.JFrame {
         btn_incio.setBackground(new java.awt.Color(250, 241, 228));
         btn_incio.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_incio.setForeground(new java.awt.Color(71, 83, 60));
-        btn_incio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/dash2.png"))); // NOI18N
+        btn_incio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/dash2.png"))); // NOI18N
         btn_incio.setText("  INÍCIO");
         btn_incio.setContentAreaFilled(false);
         btn_incio.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +92,7 @@ public class Mapa extends javax.swing.JFrame {
         btn_dados.setBackground(new java.awt.Color(250, 241, 228));
         btn_dados.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_dados.setForeground(new java.awt.Color(71, 83, 60));
-        btn_dados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/graph2.png"))); // NOI18N
+        btn_dados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/graph2.png"))); // NOI18N
         btn_dados.setText("  DADOS");
         btn_dados.setContentAreaFilled(false);
         btn_dados.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +116,7 @@ public class Mapa extends javax.swing.JFrame {
 
         btn_sair.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_sair.setForeground(new java.awt.Color(71, 83, 60));
-        btn_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/logout.png"))); // NOI18N
+        btn_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/logout.png"))); // NOI18N
         btn_sair.setText("  SAIR");
         btn_sair.setContentAreaFilled(false);
         btn_sair.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +125,7 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/antravision_verde 3.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/antravision_verde 3.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -190,7 +190,7 @@ public class Mapa extends javax.swing.JFrame {
             .addGap(0, 5, Short.MAX_VALUE)
         );
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/img.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/img.png"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(1200, 900));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

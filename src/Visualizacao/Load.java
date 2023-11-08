@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Visualização;
+package Visualizacao;
 
 /**
  *
@@ -38,9 +38,9 @@ public class Load extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(201, 219, 178));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/antravision_verde 2.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/antravision_verde 2.png"))); // NOI18N
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/Logoname.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/Logoname.png"))); // NOI18N
 
         btn_login.setBackground(new java.awt.Color(250, 241, 228));
         btn_login.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N

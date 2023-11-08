@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Visualização;
+package Visualizacao;
 
 import Modelagem.Dados1;
 import java.sql.ResultSet;
@@ -84,14 +84,6 @@ public class Dados extends javax.swing.JFrame {
             .addGap(0, 38, Short.MAX_VALUE)
         );
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/pencil.png"))); // NOI18N
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(250, 241, 228));
@@ -113,7 +105,7 @@ public class Dados extends javax.swing.JFrame {
 
         btn_perfil.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_perfil.setForeground(new java.awt.Color(71, 83, 60));
-        btn_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/user2.png"))); // NOI18N
+        btn_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/user2.png"))); // NOI18N
         btn_perfil.setText("  PERFIL");
         btn_perfil.setContentAreaFilled(false);
         btn_perfil.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +117,7 @@ public class Dados extends javax.swing.JFrame {
         btn_inicio.setBackground(new java.awt.Color(250, 241, 228));
         btn_inicio.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_inicio.setForeground(new java.awt.Color(71, 83, 60));
-        btn_inicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/dash2.png"))); // NOI18N
+        btn_inicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/dash2.png"))); // NOI18N
         btn_inicio.setText("  INÍCIO");
         btn_inicio.setContentAreaFilled(false);
         btn_inicio.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +129,7 @@ public class Dados extends javax.swing.JFrame {
         btn_dados.setBackground(new java.awt.Color(250, 241, 228));
         btn_dados.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_dados.setForeground(new java.awt.Color(148, 166, 132));
-        btn_dados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/graph.png"))); // NOI18N
+        btn_dados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/graph.png"))); // NOI18N
         btn_dados.setText("  DADOS");
         btn_dados.setContentAreaFilled(false);
         btn_dados.setOpaque(true);
@@ -149,7 +141,7 @@ public class Dados extends javax.swing.JFrame {
 
         btn_mapa.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_mapa.setForeground(new java.awt.Color(71, 83, 60));
-        btn_mapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/map2.png"))); // NOI18N
+        btn_mapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/map2.png"))); // NOI18N
         btn_mapa.setText("  MAPA");
         btn_mapa.setContentAreaFilled(false);
         btn_mapa.addActionListener(new java.awt.event.ActionListener() {
@@ -160,7 +152,7 @@ public class Dados extends javax.swing.JFrame {
 
         btn_sair.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_sair.setForeground(new java.awt.Color(71, 83, 60));
-        btn_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/logout.png"))); // NOI18N
+        btn_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/logout.png"))); // NOI18N
         btn_sair.setText("  SAIR");
         btn_sair.setContentAreaFilled(false);
         btn_sair.addActionListener(new java.awt.event.ActionListener() {
@@ -169,7 +161,7 @@ public class Dados extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/antravision_verde 3.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/antravision_verde 3.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
