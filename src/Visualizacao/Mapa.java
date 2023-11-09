@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Visualização;
+package Visualizacao;
 
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -68,7 +68,7 @@ public class Mapa extends javax.swing.JFrame {
         btn_perfil.setBackground(new java.awt.Color(250, 241, 228));
         btn_perfil.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_perfil.setForeground(new java.awt.Color(71, 83, 60));
-        btn_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/user2.png"))); // NOI18N
+        btn_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/user2.png"))); // NOI18N
         btn_perfil.setText("  PERFIL");
         btn_perfil.setContentAreaFilled(false);
         btn_perfil.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +80,7 @@ public class Mapa extends javax.swing.JFrame {
         btn_incio.setBackground(new java.awt.Color(250, 241, 228));
         btn_incio.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_incio.setForeground(new java.awt.Color(71, 83, 60));
-        btn_incio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/dash2.png"))); // NOI18N
+        btn_incio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/dash2.png"))); // NOI18N
         btn_incio.setText("  INÍCIO");
         btn_incio.setContentAreaFilled(false);
         btn_incio.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +92,7 @@ public class Mapa extends javax.swing.JFrame {
         btn_dados.setBackground(new java.awt.Color(250, 241, 228));
         btn_dados.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_dados.setForeground(new java.awt.Color(71, 83, 60));
-        btn_dados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/graph2.png"))); // NOI18N
+        btn_dados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/graph2.png"))); // NOI18N
         btn_dados.setText("  DADOS");
         btn_dados.setContentAreaFilled(false);
         btn_dados.addActionListener(new java.awt.event.ActionListener() {
@@ -104,7 +104,7 @@ public class Mapa extends javax.swing.JFrame {
         btn_mapa.setBackground(new java.awt.Color(250, 241, 228));
         btn_mapa.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_mapa.setForeground(new java.awt.Color(148, 166, 132));
-        btn_mapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/map.png"))); // NOI18N
+        btn_mapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/map.png"))); // NOI18N
         btn_mapa.setText("  MAPA");
         btn_mapa.setContentAreaFilled(false);
         btn_mapa.setOpaque(true);
@@ -116,7 +116,7 @@ public class Mapa extends javax.swing.JFrame {
 
         btn_sair.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_sair.setForeground(new java.awt.Color(71, 83, 60));
-        btn_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/logout.png"))); // NOI18N
+        btn_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/logout.png"))); // NOI18N
         btn_sair.setText("  SAIR");
         btn_sair.setContentAreaFilled(false);
         btn_sair.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +125,7 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/antravision_verde 3.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/antravision_verde 3.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -183,14 +183,14 @@ public class Mapa extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 333, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 5, Short.MAX_VALUE)
         );
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/img.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/img.png"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(1200, 900));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -199,13 +199,15 @@ public class Mapa extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -214,9 +216,9 @@ public class Mapa extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+                .addGap(37, 37, 37))
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -224,11 +226,15 @@ public class Mapa extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -244,7 +250,6 @@ public class Mapa extends javax.swing.JFrame {
     private void btn_dadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dadosActionPerformed
         Dados d = new Dados(email);
         d.setVisible(true);
-        this.setVisible(false);
     }//GEN-LAST:event_btn_dadosActionPerformed
 
     private void btn_mapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_mapaActionPerformed

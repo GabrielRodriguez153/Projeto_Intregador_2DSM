@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Visualização;
+package Visualizacao;
 
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -98,7 +98,7 @@ public class Inicio extends javax.swing.JFrame {
 
         btn_perfil.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_perfil.setForeground(new java.awt.Color(71, 83, 60));
-        btn_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/user2.png"))); // NOI18N
+        btn_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/user2.png"))); // NOI18N
         btn_perfil.setText("  PERFIL");
         btn_perfil.setContentAreaFilled(false);
         btn_perfil.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +110,7 @@ public class Inicio extends javax.swing.JFrame {
         btn_inicio.setBackground(new java.awt.Color(250, 241, 228));
         btn_inicio.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_inicio.setForeground(new java.awt.Color(148, 166, 132));
-        btn_inicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/dash.png"))); // NOI18N
+        btn_inicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/dash.png"))); // NOI18N
         btn_inicio.setText("  INÍCIO");
         btn_inicio.setContentAreaFilled(false);
         btn_inicio.setOpaque(true);
@@ -122,7 +122,7 @@ public class Inicio extends javax.swing.JFrame {
 
         btn_dados.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_dados.setForeground(new java.awt.Color(71, 83, 60));
-        btn_dados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/graph2.png"))); // NOI18N
+        btn_dados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/graph2.png"))); // NOI18N
         btn_dados.setText("  DADOS");
         btn_dados.setContentAreaFilled(false);
         btn_dados.addActionListener(new java.awt.event.ActionListener() {
@@ -133,7 +133,7 @@ public class Inicio extends javax.swing.JFrame {
 
         btn_mapa.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_mapa.setForeground(new java.awt.Color(71, 83, 60));
-        btn_mapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/map2.png"))); // NOI18N
+        btn_mapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/map2.png"))); // NOI18N
         btn_mapa.setText("  MAPA");
         btn_mapa.setContentAreaFilled(false);
         btn_mapa.addActionListener(new java.awt.event.ActionListener() {
@@ -144,7 +144,7 @@ public class Inicio extends javax.swing.JFrame {
 
         btn_sair.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_sair.setForeground(new java.awt.Color(71, 83, 60));
-        btn_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/logout.png"))); // NOI18N
+        btn_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/logout.png"))); // NOI18N
         btn_sair.setText("  SAIR");
         btn_sair.setContentAreaFilled(false);
         btn_sair.addActionListener(new java.awt.event.ActionListener() {
@@ -153,7 +153,7 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/antravision_verde 3.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/antravision_verde 3.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -199,14 +199,14 @@ public class Inicio extends javax.swing.JFrame {
                 .addGap(21, 21, 21))
         );
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/img1.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/img1.png"))); // NOI18N
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/about.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/about.png"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(1200, 214));
         jLabel2.setName(""); // NOI18N
         jLabel2.setPreferredSize(new java.awt.Dimension(800, 214));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/ANT.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/ANT.png"))); // NOI18N
         jLabel3.setPreferredSize(new java.awt.Dimension(700, 203));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -215,7 +215,7 @@ public class Inicio extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 27, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 870, Short.MAX_VALUE)
@@ -227,9 +227,9 @@ public class Inicio extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -260,7 +260,6 @@ public class Inicio extends javax.swing.JFrame {
     private void btn_dadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dadosActionPerformed
         Dados d = new Dados(email);
         d.setVisible(true);
-        this.setVisible(false);
     }//GEN-LAST:event_btn_dadosActionPerformed
 
     private void btn_mapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_mapaActionPerformed

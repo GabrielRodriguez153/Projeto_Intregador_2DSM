@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Visualização;
+package Visualizacao;
 
 import Modelagem.Cadastro_Login;
 import java.sql.ResultSet;
@@ -141,7 +141,7 @@ public class Login extends javax.swing.JFrame {
                 .addGap(41, 41, 41))
         );
 
-        lbl_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/antravision_verde 3.png"))); // NOI18N
+        lbl_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/antravision_verde 3.png"))); // NOI18N
         lbl_logo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_logoMouseClicked(evt);
@@ -154,21 +154,21 @@ public class Login extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(184, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(256, 256, 256)
-                        .addComponent(lbl_logo)))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(185, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(440, 440, 440)
+                .addComponent(lbl_logo)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(57, Short.MAX_VALUE)
+                .addContainerGap(40, Short.MAX_VALUE)
                 .addComponent(lbl_logo)
-                .addGap(47, 47, 47)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -200,7 +200,7 @@ public class Login extends javax.swing.JFrame {
         try{
             if(tabela.first()) {
                 
-                JOptionPane.showMessageDialog(null,"Usuário Autenticado");
+                JOptionPane.showMessageDialog(null,"Usuário Válido");
                 
                 String usuarioLogado = inp_email.getText();
                 System.out.println(inp_email.getText());
@@ -210,7 +210,7 @@ public class Login extends javax.swing.JFrame {
 
             }
             else{
-                JOptionPane.showMessageDialog(null,"Usuário não Autenticado");
+                JOptionPane.showMessageDialog(null,"Usuário não Válido");
             }
         }
             catch(SQLException erro){

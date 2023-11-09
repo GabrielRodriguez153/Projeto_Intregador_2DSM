@@ -3,22 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Visualização;
+package Visualizacao;
 
 import Modelagem.Dados1;
+import Modelagem.Sort;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class Dados extends javax.swing.JFrame {
 
     private static String email;
-    /**
-     * Creates new form Dados1
-     */
+
     public Dados(String email) {
         initComponents();
         obterDado();
@@ -27,7 +30,8 @@ public class Dados extends javax.swing.JFrame {
     
     
     Dados1 dad = new Dados1();
-    
+  
+   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -84,14 +88,6 @@ public class Dados extends javax.swing.JFrame {
             .addGap(0, 38, Short.MAX_VALUE)
         );
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/pencil.png"))); // NOI18N
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(250, 241, 228));
@@ -113,7 +109,7 @@ public class Dados extends javax.swing.JFrame {
 
         btn_perfil.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_perfil.setForeground(new java.awt.Color(71, 83, 60));
-        btn_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/user2.png"))); // NOI18N
+        btn_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/user2.png"))); // NOI18N
         btn_perfil.setText("  PERFIL");
         btn_perfil.setContentAreaFilled(false);
         btn_perfil.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +121,7 @@ public class Dados extends javax.swing.JFrame {
         btn_inicio.setBackground(new java.awt.Color(250, 241, 228));
         btn_inicio.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_inicio.setForeground(new java.awt.Color(71, 83, 60));
-        btn_inicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/dash2.png"))); // NOI18N
+        btn_inicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/dash2.png"))); // NOI18N
         btn_inicio.setText("  INÍCIO");
         btn_inicio.setContentAreaFilled(false);
         btn_inicio.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +133,7 @@ public class Dados extends javax.swing.JFrame {
         btn_dados.setBackground(new java.awt.Color(250, 241, 228));
         btn_dados.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_dados.setForeground(new java.awt.Color(148, 166, 132));
-        btn_dados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/graph.png"))); // NOI18N
+        btn_dados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/graph.png"))); // NOI18N
         btn_dados.setText("  DADOS");
         btn_dados.setContentAreaFilled(false);
         btn_dados.setOpaque(true);
@@ -149,7 +145,7 @@ public class Dados extends javax.swing.JFrame {
 
         btn_mapa.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_mapa.setForeground(new java.awt.Color(71, 83, 60));
-        btn_mapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/map2.png"))); // NOI18N
+        btn_mapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/map2.png"))); // NOI18N
         btn_mapa.setText("  MAPA");
         btn_mapa.setContentAreaFilled(false);
         btn_mapa.addActionListener(new java.awt.event.ActionListener() {
@@ -160,7 +156,7 @@ public class Dados extends javax.swing.JFrame {
 
         btn_sair.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_sair.setForeground(new java.awt.Color(71, 83, 60));
-        btn_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/logout.png"))); // NOI18N
+        btn_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/logout.png"))); // NOI18N
         btn_sair.setText("  SAIR");
         btn_sair.setContentAreaFilled(false);
         btn_sair.addActionListener(new java.awt.event.ActionListener() {
@@ -169,7 +165,7 @@ public class Dados extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualização/src/antravision_verde 3.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/antravision_verde 3.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -187,30 +183,29 @@ public class Dados extends javax.swing.JFrame {
                     .addComponent(btn_mapa, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_perfil, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(41, 41, 41)
-                                .addComponent(jLabel7))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(48, 48, 48)
-                                .addComponent(btn_sair)))
+                        .addGap(48, 48, 48)
+                        .addComponent(btn_sair)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addGap(36, 36, 36))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(25, 25, 25)
                 .addComponent(jLabel7)
-                .addGap(41, 41, 41)
+                .addGap(42, 42, 42)
                 .addComponent(btn_inicio, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(49, 49, 49)
                 .addComponent(btn_dados, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(51, 51, 51)
                 .addComponent(btn_mapa, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(btn_perfil, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 204, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21)
                 .addComponent(btn_sair, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -523,21 +518,42 @@ public class Dados extends javax.swing.JFrame {
         
         
         tabela = dad.consultarDado();
-
+        
+        
+        
+        
         DefaultTableModel modelo = (DefaultTableModel) tbl_dados.getModel();
         modelo.setNumRows(0);
-
+        
         try{
+            List<Dados1> locs = new ArrayList<>();  
             do{
-                modelo.addRow(new String[]{tabela.getString(1), tabela.getString(2), tabela.getString(3), tabela.getString(4), tabela.getString(5),tabela.getString(6),tabela.getString(7)});
+                Dados1 dado = new Dados1(tabela.getInt(1), tabela.getString(2), tabela.getString(3), tabela.getString(4), tabela.getString(5), tabela.getString(6), tabela.getString(7));
+                locs.add(dado);
             }
             while(tabela.next());
+            
+            Sort sort = new Sort();
+            sort.mergeSortByData(locs);
+            for (Dados1 dado : locs) {
+                            
+
+                    modelo.addRow(new String[] {
+                    String.valueOf(dado.getId()),
+                    dado.getNome(),
+                    dado.getProprietario(),
+                    dado.getTelefone(),
+                    dado.getDt_analise(),
+                    dado.getDoenca(),
+                    dado.getObs()
+                });
+            }
         }
         catch(SQLException erro){
             JOptionPane.showMessageDialog(null,"Erro preencher tabela" + erro);
+        }
 
-        }
-        }
+}
     
        public void obterDado(){
       
@@ -547,28 +563,42 @@ public class Dados extends javax.swing.JFrame {
        tabela = dad.consultarProprietario(txt_pesquisar.getText());
        DefaultTableModel modelo = (DefaultTableModel) tbl_dados.getModel();
        modelo.setNumRows(0);
-       try
-       {
-        do{
-            modelo.addRow(new String[]{tabela.getString(1), tabela.getString(2), tabela.getString(3), tabela.getString(4), tabela.getString(5),tabela.getString(6),tabela.getString(7)});
-          }
-        while(tabela.next());
-        }
-        catch(SQLException erro)
-        {
-            JOptionPane.showMessageDialog(null, "Erro ao preencher tabela"+ erro.getMessage()) ;    
-        }
-      }
+        try{
+            List<Dados1> locs = new ArrayList<>();  
+            do{
+                Dados1 dado = new Dados1(tabela.getInt(1), tabela.getString(2), tabela.getString(3), tabela.getString(4), tabela.getString(5), tabela.getString(6), tabela.getString(7));
+                locs.add(dado);
+            }
+            while(tabela.next());
+            
+            Sort sort = new Sort();
+            sort.mergeSortByData(locs);
+            for (Dados1 dado : locs) {
+                            
 
-    
+                    modelo.addRow(new String[] {
+                    String.valueOf(dado.getId()),
+                    dado.getNome(),
+                    dado.getProprietario(),
+                    dado.getTelefone(),
+                    dado.getDt_analise(),
+                    dado.getDoenca(),
+                    dado.getObs()
+                });
+            }
+        }
+        catch(SQLException erro){
+            JOptionPane.showMessageDialog(null,"Erro preencher tabela" + erro);
+        }
+       }
+        
     private void btn_inicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inicioActionPerformed
-        this.setVisible(false);
         Inicio i = new Inicio(email);
         i.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btn_inicioActionPerformed
 
     private void btn_dadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dadosActionPerformed
-        this.setVisible(false);
         Dados d = new Dados(email);
         d.setVisible(true);
     }//GEN-LAST:event_btn_dadosActionPerformed
@@ -585,7 +615,7 @@ public class Dados extends javax.swing.JFrame {
         try {
             p = new Perfil(email);
             p.setVisible(true);
-        } catch (SQLException ex) {
+        } catch(SQLException ex) {
             Logger.getLogger(Dados.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -629,16 +659,33 @@ public class Dados extends javax.swing.JFrame {
     DefaultTableModel modelo = (DefaultTableModel) tbl_dados.getModel();
     modelo.setNumRows(0);
     
-    try
-    {
-        do{
-            modelo.addRow(new String[]{tabela.getString(1), tabela.getString(2), tabela.getString(3), tabela.getString(4), tabela.getString(5),tabela.getString(6),tabela.getString(7)});
+     try{
+            List<Dados1> locs = new ArrayList<>();  
+            do{
+                Dados1 dado = new Dados1(tabela.getInt(1), tabela.getString(2), tabela.getString(3), tabela.getString(4), tabela.getString(5), tabela.getString(6), tabela.getString(7));
+                locs.add(dado);
+            }
+            while(tabela.next());
+            
+            Sort sort = new Sort();
+            sort.mergeSortByData(locs);
+            for (Dados1 dado : locs) {
+                            
+
+                    modelo.addRow(new String[] {
+                    String.valueOf(dado.getId()),
+                    dado.getNome(),
+                    dado.getProprietario(),
+                    dado.getTelefone(),
+                    dado.getDt_analise(),
+                    dado.getDoenca(),
+                    dado.getObs()
+                });
+            }
         }
-     while(tabela.next());
-    }catch(SQLException erro)
-            {
-            JOptionPane.showMessageDialog(null, "Erro ao preencher tabela"+ erro) ;    
-             }
+        catch(SQLException erro){
+            JOptionPane.showMessageDialog(null,"Erro preencher tabela" + erro);
+        }
     
     }//GEN-LAST:event_btn_criarActionPerformed
 
@@ -691,11 +738,8 @@ public class Dados extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_dt_analiseActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+        
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -718,7 +762,7 @@ public class Dados extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
+       
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Dados(email).setVisible(true);

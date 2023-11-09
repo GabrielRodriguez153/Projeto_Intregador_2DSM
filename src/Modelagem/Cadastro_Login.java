@@ -106,7 +106,6 @@ public class Cadastro_Login {
   public void alterar_Usuario(){
         String sql;
         sql="UPDATE Sign_In_Up SET Nome='"+ this.getNome()+"',Sobrenome='"+this.getSobrenome()+"',Email='"+this.getEmail()+"',Senha='"+this.getSenha()+"' where CODIGO='"+getCodigo()+"'";
-        System.out.println(getCodigo());
         con.executeSQL(sql);
         JOptionPane.showMessageDialog(null, "Registro Alterado com Sucesso...");
         
