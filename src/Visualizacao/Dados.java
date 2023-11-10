@@ -72,6 +72,7 @@ public class Dados extends javax.swing.JFrame {
         txt_id = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         txt_pesquisar = new javax.swing.JTextField();
+        btn_ordenar = new javax.swing.JButton();
 
         jLabel5.setText("jLabel3");
 
@@ -87,7 +88,6 @@ public class Dados extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 38, Short.MAX_VALUE)
         );
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(250, 241, 228));
@@ -392,6 +392,18 @@ public class Dados extends javax.swing.JFrame {
             }
         });
 
+        btn_ordenar.setBackground(new java.awt.Color(201, 219, 178));
+        btn_ordenar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btn_ordenar.setForeground(new java.awt.Color(71, 83, 60));
+        btn_ordenar.setText("ORDENAR");
+        btn_ordenar.setContentAreaFilled(false);
+        btn_ordenar.setOpaque(true);
+        btn_ordenar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ordenarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -438,11 +450,13 @@ public class Dados extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btn_excluir)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_limpar))
+                                .addComponent(btn_limpar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_ordenar, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
                                 .addComponent(jLabel1)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(375, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -490,7 +504,8 @@ public class Dados extends javax.swing.JFrame {
                     .addComponent(btn_alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_excluir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_limpar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_criar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_criar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_ordenar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(30, Short.MAX_VALUE))
@@ -518,39 +533,16 @@ public class Dados extends javax.swing.JFrame {
         
         
         tabela = dad.consultarDado();
-        
-        
-        
-        
         DefaultTableModel modelo = (DefaultTableModel) tbl_dados.getModel();
         modelo.setNumRows(0);
         
-        try{
-            List<Dados1> locs = new ArrayList<>();  
-            do{
-                Dados1 dado = new Dados1(tabela.getInt(1), tabela.getString(2), tabela.getString(3), tabela.getString(4), tabela.getString(5), tabela.getString(6), tabela.getString(7));
-                locs.add(dado);
-            }
-            while(tabela.next());
-            
-            Sort sort = new Sort();
-            sort.mergeSortByData(locs);
-            for (Dados1 dado : locs) {
-                            
-
-                    modelo.addRow(new String[] {
-                    String.valueOf(dado.getId()),
-                    dado.getNome(),
-                    dado.getProprietario(),
-                    dado.getTelefone(),
-                    dado.getDt_analise(),
-                    dado.getDoenca(),
-                    dado.getObs()
-                });
-            }
-        }
-        catch(SQLException erro){
-            JOptionPane.showMessageDialog(null,"Erro preencher tabela" + erro);
+       try{
+        do{
+           modelo.addRow(new String[]{tabela.getString(1),tabela.getString(2), tabela.getString(3), tabela.getString(4), tabela.getString(5), tabela.getString(6), tabela.getString(7)});
+        }while(tabela.next());
+      
+        }catch(SQLException erro){
+            JOptionPane.showMessageDialog(null, "Erro ao preencher tabela"+ erro) ;    
         }
 
 }
@@ -563,34 +555,16 @@ public class Dados extends javax.swing.JFrame {
        tabela = dad.consultarProprietario(txt_pesquisar.getText());
        DefaultTableModel modelo = (DefaultTableModel) tbl_dados.getModel();
        modelo.setNumRows(0);
-        try{
-            List<Dados1> locs = new ArrayList<>();  
-            do{
-                Dados1 dado = new Dados1(tabela.getInt(1), tabela.getString(2), tabela.getString(3), tabela.getString(4), tabela.getString(5), tabela.getString(6), tabela.getString(7));
-                locs.add(dado);
-            }
-            while(tabela.next());
-            
-            Sort sort = new Sort();
-            sort.mergeSortByData(locs);
-            for (Dados1 dado : locs) {
-                            
-
-                    modelo.addRow(new String[] {
-                    String.valueOf(dado.getId()),
-                    dado.getNome(),
-                    dado.getProprietario(),
-                    dado.getTelefone(),
-                    dado.getDt_analise(),
-                    dado.getDoenca(),
-                    dado.getObs()
-                });
-            }
-        }
-        catch(SQLException erro){
-            JOptionPane.showMessageDialog(null,"Erro preencher tabela" + erro);
-        }
-       }
+        try
+        {
+        do{
+           modelo.addRow(new String[]{tabela.getString(1),tabela.getString(2), tabela.getString(3), tabela.getString(4), tabela.getString(5), tabela.getString(6), tabela.getString(7)});
+         }while(tabela.next());
+      
+    }catch(SQLException erro){
+      JOptionPane.showMessageDialog(null, "Erro ao preencher tabela"+ erro) ;    
+    }
+}
         
     private void btn_inicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inicioActionPerformed
         Inicio i = new Inicio(email);
@@ -659,33 +633,15 @@ public class Dados extends javax.swing.JFrame {
     DefaultTableModel modelo = (DefaultTableModel) tbl_dados.getModel();
     modelo.setNumRows(0);
     
-     try{
-            List<Dados1> locs = new ArrayList<>();  
-            do{
-                Dados1 dado = new Dados1(tabela.getInt(1), tabela.getString(2), tabela.getString(3), tabela.getString(4), tabela.getString(5), tabela.getString(6), tabela.getString(7));
-                locs.add(dado);
-            }
-            while(tabela.next());
-            
-            Sort sort = new Sort();
-            sort.mergeSortByData(locs);
-            for (Dados1 dado : locs) {
-                            
-
-                    modelo.addRow(new String[] {
-                    String.valueOf(dado.getId()),
-                    dado.getNome(),
-                    dado.getProprietario(),
-                    dado.getTelefone(),
-                    dado.getDt_analise(),
-                    dado.getDoenca(),
-                    dado.getObs()
-                });
-            }
-        }
-        catch(SQLException erro){
-            JOptionPane.showMessageDialog(null,"Erro preencher tabela" + erro);
-        }
+    try
+    {
+      do{
+         modelo.addRow(new String[]{tabela.getString(1),tabela.getString(2), tabela.getString(3), tabela.getString(4), tabela.getString(5), tabela.getString(6), tabela.getString(7)});
+    }while(tabela.next());
+      
+    }catch(SQLException erro){
+      JOptionPane.showMessageDialog(null, "Erro ao preencher tabela"+ erro) ;    
+    }
     
     }//GEN-LAST:event_btn_criarActionPerformed
 
@@ -738,6 +694,42 @@ public class Dados extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_dt_analiseActionPerformed
 
+    private void btn_ordenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ordenarActionPerformed
+      ResultSet tabela;
+       tabela = null;
+    
+       tabela = dad.consultarProprietario(txt_pesquisar.getText());
+       DefaultTableModel modelo = (DefaultTableModel) tbl_dados.getModel();
+       modelo.setNumRows(0);
+        try{
+            List<Dados1> locs = new ArrayList<>();  
+            do{
+                Dados1 dado = new Dados1(tabela.getInt(1), tabela.getString(2), tabela.getString(3), tabela.getString(4), tabela.getString(5), tabela.getString(6), tabela.getString(7));
+                locs.add(dado);
+            }
+            while(tabela.next());
+            
+            Sort sort = new Sort();
+            sort.mergeSortByData(locs);
+            for (Dados1 dado : locs) {
+                            
+
+                    modelo.addRow(new String[] {
+                    String.valueOf(dado.getId()),
+                    dado.getNome(),
+                    dado.getProprietario(),
+                    dado.getTelefone(),
+                    dado.getDt_analise(),
+                    dado.getDoenca(),
+                    dado.getObs()
+                });
+            }
+        }
+        catch(SQLException erro){
+            JOptionPane.showMessageDialog(null,"Erro preencher tabela" + erro);
+        }
+    }//GEN-LAST:event_btn_ordenarActionPerformed
+
     public static void main(String args[]) {
         
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -778,6 +770,7 @@ public class Dados extends javax.swing.JFrame {
     private javax.swing.JButton btn_inicio;
     private javax.swing.JButton btn_limpar;
     private javax.swing.JButton btn_mapa;
+    private javax.swing.JButton btn_ordenar;
     private javax.swing.JButton btn_perfil;
     private javax.swing.JButton btn_pesquisar;
     private javax.swing.JButton btn_sair;
