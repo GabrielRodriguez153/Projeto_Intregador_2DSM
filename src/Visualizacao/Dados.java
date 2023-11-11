@@ -395,7 +395,7 @@ public class Dados extends javax.swing.JFrame {
         btn_ordenar.setBackground(new java.awt.Color(201, 219, 178));
         btn_ordenar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         btn_ordenar.setForeground(new java.awt.Color(71, 83, 60));
-        btn_ordenar.setText("ORDENAR");
+        btn_ordenar.setText("ORDENAR DADOS");
         btn_ordenar.setContentAreaFilled(false);
         btn_ordenar.setOpaque(true);
         btn_ordenar.addActionListener(new java.awt.event.ActionListener() {
@@ -452,11 +452,11 @@ public class Dados extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btn_limpar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_ordenar, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btn_ordenar))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
                                 .addComponent(jLabel1)))
-                        .addContainerGap(375, Short.MAX_VALUE))))
+                        .addContainerGap(339, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -472,7 +472,7 @@ public class Dados extends javax.swing.JFrame {
                     .addComponent(txt_id, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txt_pesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btn_pesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btn_pesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()

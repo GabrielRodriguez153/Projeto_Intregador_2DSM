@@ -131,7 +131,7 @@
                   <Component id="inp_senha" min="-2" pref="50" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   <Component id="btn_salvar_alteracoes" min="-2" pref="53" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Component id="btn_excluir_conta" min="-2" pref="53" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -493,13 +493,13 @@
         <Component class="javax.swing.JButton" name="btn_excluir_conta">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="b2" green="db" red="c9" type="rgb"/>
+              <Color blue="ae" green="ae" red="fc" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Century Gothic" size="18" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="3c" green="53" red="47" type="rgb"/>
+              <Color blue="12" green="13" red="b3" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="EXCLUIR CONTA"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">

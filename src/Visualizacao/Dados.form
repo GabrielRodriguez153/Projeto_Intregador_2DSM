@@ -134,14 +134,14 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="btn_limpar" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="btn_ordenar" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <Component id="btn_ordenar" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jPanel5" pref="294" max="32767" attributes="0"/>
                                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="375" max="32767" attributes="0"/>
+                          <EmptySpace pref="339" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -161,7 +161,7 @@
                       <Component id="txt_id" alignment="0" min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txt_pesquisar" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
-                          <Component id="btn_pesquisar" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="btn_pesquisar" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -755,7 +755,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3c" green="53" red="47" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="ORDENAR"/>
+            <Property name="text" type="java.lang.String" value="ORDENAR DADOS"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>

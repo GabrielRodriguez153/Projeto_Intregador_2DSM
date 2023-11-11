@@ -262,9 +262,9 @@ public class Perfil extends javax.swing.JFrame {
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visualizacao/src/perfil.png"))); // NOI18N
 
-        btn_excluir_conta.setBackground(new java.awt.Color(201, 219, 178));
+        btn_excluir_conta.setBackground(new java.awt.Color(252, 174, 174));
         btn_excluir_conta.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        btn_excluir_conta.setForeground(new java.awt.Color(71, 83, 60));
+        btn_excluir_conta.setForeground(new java.awt.Color(179, 19, 18));
         btn_excluir_conta.setText("EXCLUIR CONTA");
         btn_excluir_conta.setBorder(null);
         btn_excluir_conta.setContentAreaFilled(false);
@@ -348,7 +348,7 @@ public class Perfil extends javax.swing.JFrame {
                 .addComponent(inp_senha, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(btn_salvar_alteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addGap(20, 20, 20)
                 .addComponent(btn_excluir_conta, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
